@@ -5,7 +5,7 @@
     <Modal         v-if="showModal"
                    @close="showModal = false"
                    :wbsLoading="wbsLoading"
-                   @fetch="testfunc"
+                   @fetch="onFetchWbs"
     />
   </div>
 </template>
@@ -36,7 +36,8 @@ export default {
         console.log("done");
         this.wbsLoading = false;
       }, 3000);
-      this.wbsLoading = false;
+
+      // this.$set(this.wbsLoading, false);
     }
   }
 }
